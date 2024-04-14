@@ -1,0 +1,141 @@
+.bg-white { background-color: #fff }
+.bg-light-gray { background-color: #ececec }
+.bg {
+    background-image: url(https://imgvb.com/images/2024/04/12/c6eb370197246320fce67feb4bb14e29.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;    
+}
+
+.button
+ {
+    display: inline-block;
+    padding: .75em 1.5em;
+    background: #666;
+    color: #fff;
+    border-radius: .5em;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 20px;
+}
+
+.color-gray { color: #666 }
+.color-red { color: red }
+
+.display-center { display: grid;    place-items: center; }
+.display-flex-center { display: flex;    align-items: center;    justify-content: center; }
+
+.font-poppins { font-family: poppins; }
+
+.fs-xl { font-size: x-large }
+.fs-xxl { font-size: xx-large }
+.img { width: 100%;    border-radius: 5px; }
+.text-center { text-align: center; }
+/*===== ===== ===== NavBar ===== ===== ===== */
+* { margin: 0;     padding: 0;     box-sizing: border-box;     font-family: poppins; }
+.nav-header { display: flex;     align-items: center;     justify-content: space-between;
+    padding: 2rem;     background-color: transparent; }
+.nav-header button i { text-decoration: none;     color: #1c1c1c; }
+.nav-header i:hover { color: #ff9900; }
+.logo { max-width: 10rem;     text-align: center;     color: #333; }
+.nav-list { list-style-type: none;     display: flex;     gap: 1rem; }
+.nav-list li a { text-decoration: none;     color: #1c1c1c; }
+.nav-list a:hover { color: #ff9900; }
+.abrir-menu, .cerrar-menu { display: none; }
+
+@media screen and (max-width: 800px) {
+    .abrir-menu, .cerrar-menu { display: block;     border: 0;
+        font-size: 1.25rem;     background-color: transparent;     cursor: pointer; }
+    .abrir-menu { color: #1c1c1c; }
+    .cerrar-menu { color: #ececec; }
+
+    .nav { opacity: 0;     visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #333;
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+    }
+
+    .nav.visible { opacity: 1;     visibility: visible; }
+    .nav-list { flex-direction: column;     align-items: end; }
+    .nav-list li a, i { text-decoration: none;     color: #fff;     font-weight: bold; }
+    .nav-list a:hover i:hover { color: #ff9900; }
+}/*===== ===== ===== NavBar ===== ===== ===== */
+
+/*===== Card =====*/ /*===== Card =====*/ /*===== Card =====*/ /*===== Card =====*/
+.card {
+    width: 350px;
+    padding: 20px;
+    border: 2px, solid #ccc;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.card-2 {
+    max-width: 600px;
+    padding: 20px;
+    border: 2px, solid #ccc;
+    border-radius: 10px;
+    margin: 20px;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.card img { width: 300px;     border-radius: 5px; }
+.card h2 { margin-top: auto;     font-size: 20px; }
+.card p { margin-top: 10px;     font-size: 16px;     color: #666; }
+/*===== Card =====*/ /*===== Card =====*/ /*===== Card =====*/ /*===== Card =====*/
+
+/* Tabla */ /* Tabla */ /* Tabla */ /* Tabla */
+.tabla-personas {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-personas th, .tabla-personas td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.tabla-personas th {
+    background-color: #f2f2f2;
+}
+
+.tabla-personas tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.tabla-personas tr:hover {
+    background-color: #ddd;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    color: #666;
+}
+th {
+    background-color: #f2f2f2;
+}
+/* Tabla */ /* Tabla */ /* Tabla */ /* Tabla */
