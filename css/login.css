@@ -35,7 +35,7 @@ body {
     border-radius: 8px;
     transform-origin: 128px;
     transform: scale(2.2) rotate(calc(var(--i) * (360deg / 60)));
-    animation: animateBlink 5s linear infinite;
+    animation: animateBlink 1.25s linear infinite;
     animation-delay: calc(var(--i) * (5s / 60));
 }
 
