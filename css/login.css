@@ -59,11 +59,14 @@ body {
 }
 
 .h2 {
-    font-size: 1.8em;
+    font-size: 1.2em;
     text-align: center;
     margin-top: -10px;
     margin-bottom: -20px;
     font-weight: 600;
+}
+.h2:hover {
+    color: gold;
 }
 
 .input-box {
@@ -130,14 +133,20 @@ body {
     width: 100%;
     height: 45px;
     background: dodgerblue;
-    border: none;
-    outline: none;
+    border: 2px solid #333;
     border-radius: 40px;
+    outline: none;
     cursor: pointer;
     font-size: 1em;
     color: #fff;
     font-weight: 600;
     margin-top: -10px;
+}
+.btn:hover {
+    background-color: gold;
+    color: #333;
+    transition: 1.5s;
+    font-size: 25px;
 }
 
 label { color: #333;    font-weight: 500; }
@@ -160,12 +169,7 @@ label { color: #333;    font-weight: 500; }
     color: gold;
 }
 
-.login-google {
-    margin-top: 10px;
-    color: #333;
-}
-.login-google p { font-weight: 500;    font-size: 14px; }
-.login-google img { width: 70px;    margin-left: 10PX; }
+
 
 /**/
 .card {
@@ -176,7 +180,6 @@ label { color: #333;    font-weight: 500; }
     border: 2px, solid #ccc;
     border-radius: 85px;
     margin: auto;
-
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
     justify-content: center;
     align-items: center;
@@ -184,15 +187,23 @@ label { color: #333;    font-weight: 500; }
 
 .color-primary { color: #0ef; }
 .color-dogderblue { color: dodgerblue; }
+.color-gold { color: gold; }
 .color-gray { color: #333; }
-.color-red { color: red; }
+.color-red { color: crimson; }
 .color-white { color: #fff; }
 
 .display-center { display: grid;    place-items: center; }
 .display-flex-center { display: flex;    align-items: center;    justify-content: center; }
 
 
-.google-btn {
+
+
+
+.login-google { margin-top: 10px;    color: #333; }
+.login-google p { font-weight: 500;    font-size: 14px; }
+.login-google img { width: 70px;    margin-left: 10PX; }
+
+.login-google-btn {
     width: 250px;
     height: 40px;
     padding: 20px;
@@ -205,4 +216,15 @@ label { color: #333;    font-weight: 500; }
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
     justify-content: center;
     align-items: center;
+}
+.login-google-btn:hover { color: #333;    background-color: gold;    transition: 1.5s;
+font-weight: 700; 
+}
+
+
+.btn:hover {
+    background-color: gold;
+    color: #333;
+    transition: 1.5s;
+    font-size: 25px;
 }
