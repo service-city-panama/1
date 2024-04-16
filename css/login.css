@@ -3,23 +3,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
     font-family: "Poppins", sans-serif;
     font-weight: 300;
-    font-style: normal;
 }
 
-body {
-    margin-top: 20px;
-    min-height: 100vh;
-    background: #ececec;
-}
-
-.nav-header { display: flex;     align-items: center;     justify-content: space-between;
-    padding: 2rem;     background-color: transparent; }
+body { margin-top: 20px;    min-height: 100vh;    background: #ececec; }
 
 .container {
-    position: relative;
+    position: absolute;
     width: 256px;
     display: flex;
     justify-content: center;
@@ -36,44 +27,21 @@ body {
     transform-origin: 128px;
     transform: scale(2.2) rotate(calc(var(--i) * (360deg / 60)));
     animation: animateBlink 1.25s linear infinite;
-    animation-delay: calc(var(--i) * (5s / 60));
+    animation-delay: calc(var(--i) * (2.5s / 60));
 }
 
 @keyframes animateBlink {
-    0% {
-        background: dodgerblue;
-    }
-    25% {
-        background: #fff;
-    }
+    0% { background: dodgerblue; }
+    25% { background: #fff; }
 }
 
-.login-box {
-    position: absolute;
-    width: 400px;
-}
+.login-box { position: absolute;    width: 200px; }
+.login-box form { width: 100%;    padding: 0 10px; }
 
-.login-box form {
-    width: 100%;
-    padding: 0 50px;
-}
+.h2 { font-size: 1.2em;    text-align: center;    margin-top: -10px;    margin-bottom: -20px;    font-weight: 600; }
+.h2:hover { color: gold;    transition: .5s; }
 
-.h2 {
-    font-size: 1.2em;
-    text-align: center;
-    margin-top: -10px;
-    margin-bottom: -20px;
-    font-weight: 600;
-}
-.h2:hover {
-    color: gold;
-}
-
-.input-box {
-    position: relative;
-    margin: 25px 0;
-}
-
+.input-box { position: relative;    margin: 25px 0; }
 .input-box input {
     width: 100%;
     height: 45px;
@@ -104,30 +72,11 @@ body {
 
 .input-box input:focus~label,
 .input-box input:valid~label {
-    top: -10px;
-    font-size: .8em;
-    background: #fff;
-    padding: 0 6px;
-    color: dodgerblue;
-}
+    top: -10px;    font-size: .8em;    background: #fff;    padding: 0 6px;    color: dodgerblue; }
 
-.forgot-pass {
-    margin: -10px 0 15px;
-    margin-top: -20px;
-    text-align: end;
-}
-
-.forgot-pass a {
-    font-size: .85em;
-    color: dodgerblue;
-    text-decoration: none;
-    font-weight: 400;
-}
-
-.forgot-pass a:hover {
-    text-decoration: none;
-    color: gold;
-}
+.forgot-pass { margin: -10px 0 15px;    margin-top: -20px;    text-align: end; }
+.forgot-pass a { font-size: .85em;    color: dodgerblue;    text-decoration: none;    font-weight: 400; }
+.forgot-pass a:hover { text-decoration: none;    color: gold; }
 
 .btn {
     width: 100%;
@@ -220,7 +169,6 @@ label { color: #333;    font-weight: 500; }
 .login-google-btn:hover { color: #333;    background-color: gold;    transition: 1.5s;
 font-weight: 700; 
 }
-
 
 .btn:hover {
     background-color: gold;
