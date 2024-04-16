@@ -45,19 +45,17 @@ import { getAuth, signInWithPopup, GoogleAuthProvider } from "https://www.gstati
       });
   });
 
-// Inicialize Google API Client
-function initGoogleAPI() {
-    gapi.load('auth2', function() {
-        // Inicializar la instancia de autenticación de Google
-        gapi.auth2.init({
-            client_id: 'TU_CLIENT_ID.apps.googleusercontent.com'
-        });
-    });
-}
+  // Inicialize Google API Client
+  function initGoogleAPI() {
+      gapi.load('auth2', function() {
+          gapi.auth2.init({
+              client_id: '1068099519430-jot881noq4m0n327e4olnn9drofp2i4v.apps.googleusercontent.com'
+          });
+      });
+  }
 
-// Llamar a initGoogleAPI cuando se carga la página
-window.onload = initGoogleAPI;
-
+  // Llamar a initGoogleAPI cuando se carga la página
+  window.onload = initGoogleAPI;
 
 
 
@@ -86,16 +84,3 @@ window.onload = initGoogleAPI;
 
 
 
-
-
-  // Google Logout
-  const logout = document.getElementById("logout-btn");
-  logout.addEventListener("click", function(){
-    signOut(auth).then(() => {
-      // Cierre de sesión exitoso.
-      window.location.href = "index.html"; // Redirigir a la página de inicio de sesión después del cierre de sesión
-    }).catch((error) => {
-      // Se produjo un error al cerrar sesión.
-      console.error("Error al cerrar sesión:", error);
-    });
-  });
