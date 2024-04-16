@@ -27,7 +27,7 @@ googleLogin.addEventListener("click", function(){
     const credential = GoogleAuthProvider.credentialFromResult(result);
     const user = result.user;
     console.log(user);
-    window.location.href = "https://service-city-panama.github.io/APP/home.html";
+    window.location.href = "home.html";
   }).catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
@@ -37,7 +37,7 @@ googleLogin.addEventListener("click", function(){
 logout.addEventListener("click", function(){
   signOut(auth).then(() => {
     // Cierre de sesión exitoso.
-    window.location.href = "https://service-city-panama.github.io/APP/index.html"; // Redirigir a la página de inicio de sesión después del cierre de sesión
+    window.location.href = "index.html"; // Redirigir a la página de inicio de sesión después del cierre de sesión
   }).catch((error) => {
     // Se produjo un error al cerrar sesión.
     console.error("Error al cerrar sesión:", error);
