@@ -16,17 +16,30 @@ import { getAuth, signInWithPopup, GoogleAuthProvider } from "https://www.gstati
   auth.languageCode = 'es'
   const provider = new GoogleAuthProvider();
 
+  // Google Login
   const googleLogin = document.getElementById("google-login-btn");
-  googleLogin.addEventListener("click", function(){
-    signInWithPopup(auth, provider)
-    .then((result) => {
-        const credential = GoogleAuthProvider.credentialFromResult(result);
-        const user = result.user;
-        console.log(user);
-        window.location.href = "https://service-city-panama.github.io/APP/home.html";
-        
-    }).catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-    });
+  // Google Logout
+  const logout = document.getElementById("logout-btn");
+
+googleLogin.addEventListener("click", function(){
+  signInWithPopup(auth, provider)
+  .then((result) => {
+    const credential = GoogleAuthProvider.credentialFromResult(result);
+    const user = result.user;
+    console.log(user);
+    window.location.href = "https://service-city-panama.github.io/APP/home.html";
+  }).catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+  });
 })
+
+logout.addEventListener("click", function(){
+  signOut(auth).then(() => {
+    // Cierre de sesión exitoso.
+    window.location.href = "https://service-city-panama.github.io/APP/index.html"; // Redirigir a la página de inicio de sesión después del cierre de sesión
+  }).catch((error) => {
+    // Se produjo un error al cerrar sesión.
+    console.error("Error al cerrar sesión:", error);
+  });
+});
