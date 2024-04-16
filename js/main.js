@@ -18,28 +18,84 @@ import { getAuth, signInWithPopup, GoogleAuthProvider } from "https://www.gstati
 
   // Google Login
   const googleLogin = document.getElementById("google-login-btn");
+  googleLogin.addEventListener("click", function(){
+    signInWithPopup(auth, provider)
+    .then((result) => {
+      const credential = GoogleAuthProvider.credentialFromResult(result);
+      const user = result.user;
+      console.log(user);
+      window.location.href = "home.html";
+    }).catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+    });
+  })
+
+  // Google SignOut
+  const logoutButton = document.getElementById('logout-btn');
+  logoutButton.addEventListener('click', function() {
+      firebase.auth().signOut().then(function() {
+          var auth2 = gapi.auth2.getAuthInstance();
+          auth2.signOut().then(function () {
+              console.log('Sesión de Google cerrada exitosamente');
+              window.location.href = 'index.html';
+          });
+      }).catch(function(error) {
+          console.error('Error al cerrar sesión:', error);
+      });
+  });
+
+// Inicialize Google API Client
+function initGoogleAPI() {
+    gapi.load('auth2', function() {
+        // Inicializar la instancia de autenticación de Google
+        gapi.auth2.init({
+            client_id: 'TU_CLIENT_ID.apps.googleusercontent.com'
+        });
+    });
+}
+
+// Llamar a initGoogleAPI cuando se carga la página
+window.onload = initGoogleAPI;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   // Google Logout
   const logout = document.getElementById("logout-btn");
-
-googleLogin.addEventListener("click", function(){
-  signInWithPopup(auth, provider)
-  .then((result) => {
-    const credential = GoogleAuthProvider.credentialFromResult(result);
-    const user = result.user;
-    console.log(user);
-    window.location.href = "home.html";
-  }).catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
+  logout.addEventListener("click", function(){
+    signOut(auth).then(() => {
+      // Cierre de sesión exitoso.
+      window.location.href = "index.html"; // Redirigir a la página de inicio de sesión después del cierre de sesión
+    }).catch((error) => {
+      // Se produjo un error al cerrar sesión.
+      console.error("Error al cerrar sesión:", error);
+    });
   });
-})
-
-logout.addEventListener("click", function(){
-  signOut(auth).then(() => {
-    // Cierre de sesión exitoso.
-    window.location.href = "index.html"; // Redirigir a la página de inicio de sesión después del cierre de sesión
-  }).catch((error) => {
-    // Se produjo un error al cerrar sesión.
-    console.error("Error al cerrar sesión:", error);
-  });
-});
