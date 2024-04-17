@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar Artículo</title>
+</head>
+<body>
+
+<!-- Formulario para agregar un nuevo artículo -->
+<form id="article-form">
+    <input type="text" id="article-name" placeholder="Nombre del artículo" required>
+    <input type="text" id="article-detail" placeholder="Detalle del artículo" required>
+    <input type="file" id="article-photo" accept="image/*" required>
+    <button type="submit">Agregar Artículo</button>
+</form>
+
+<!-- Tabla para mostrar los artículos -->
+<table id="articles-table">
+    <thead>
+        <tr>
+            <th>Foto</th>
+            <th>Nombre</th>
+            <th>Detalle</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Los artículos se agregarán aquí dinámicamente -->
+    </tbody>
+</table>
+
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-storage.js"></script>
+<script src="compo.js"></script> <!-- Asegúrate de reemplazar 'tu-script.js' con la ruta de tu archivo JavaScript -->
+
+</body>
+</html>
