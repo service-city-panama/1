@@ -24,13 +24,13 @@ body { min-height: 100vh;    background: #ececec; }
 
 .auth p { text-align: center; margin-top: 1em; font-size: 1.em;    font-weight: 500;    color: #333; }
 .auth .btnClose { width: 100%;    height: 45px;    margin-top: 10px;    border: 2px solid #000;    border-radius: 10px;    outline: none;    cursor: pointer;    font-size: 1.5em;    color: #333;    font-weight: 500; }
-.auth .btnClose:hover { background-color: gold;    border: 4px solid #000;    border-radius: 10px;    font-size: 1.5em;    transition: 1.5s; }
+.auth .btnClose:hover { background-color: gold;    border: 4px solid #000;    border-radius: 10px;    transition: 1.5s; }
 .auth .input-box { margin-top: 20px; }
 
 .card {
     position: absolute;
     aspect-ratio: 1 / 1;
-    width: 420px;
+    width: 400px;
     padding: 20px;
     background-color: #fff;
     border: 2px, solid #ccc;
@@ -53,6 +53,7 @@ body { min-height: 100vh;    background: #ececec; }
     justify-content: center;
     align-items: center;
 }
+.container .btn { margin-top: 10px;}
 
 .container span {
     position: absolute;
