@@ -1,0 +1,26 @@
+v02.008---04-30: Se ha agregado con exito la pantalla de Administrador para Villo
+v02.007---04-30: correccion y arreglos de errores en el login
+v02.006---04-30: se reorganizaron los enlaces y se crearon paginas de tablero informativo y tablero de panama
+v02.005---04-29: se agrego un select para 25, 50 y 100 elementos.
+v02.004---04-29: se mejoro la interaccion de los botones de las paginas, se limitó solo a 3 paginas visibles.
+v02.003---04-29: se resolvio el problema anterior, ya se puede ver pagina por pagina.
+v02.002---04-29: funciona paginacion. sololamente la primera y ultima pagina, hay que arreglarolo para que se pueda pasar todas las paginas.
+
+Cambios del 04-27 y 28 se hicieron actualizaciones, se perdieron los registros
+v01.009---04-27: - Desistí de usar paginacion, lo eliminé y coloqué 2 botones de desplazamiento. para bajar hacia la ultima fila y subir hacia la primera. 
+v01.008---04-26: - se agregó una nueva columna para un contador de filas para la tabla
+v01.007---04-26: - se agrego un select entre lo botones de paginacion.
+v01.006---04-26: - se agregó botones para la paginación, en parte funciona hay que mejorar algunas funciones.
+v01.005---04-26: - cada vez que se haga un cambio en los select, la pagina se refresca despues de 1 segundo. asi asegurar que los cambios han sido realizados correctamente.
+v01.004---04-26: - Medida de seguridad, despues de anotar un carro, el siguiente debe esperar 10 segundos asi evitar duplicidad de datos
+		 - la pagina se refresca 1 segundo despues de anotar un carro.
+v01.003---04-26: - Se agregó estilo css 
+v01.002---04-26: - Tablero.js se modifico la columna de estado con select en cada fila para hacer los cambios directo al database evitando usar modal
+v01.001---04-26: - Firebase Realtime Database configurado
+		 - Tablero.js envia datos a database
+		 - Tablero.js muestra datos en pantalla
+
+
+Pendiente:
+- colores a los estados
+- roles y permisos
